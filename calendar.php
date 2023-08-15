@@ -3,11 +3,27 @@
 date_default_timezone_set('Asia/Tokyo');
 
 $today = filter_input(INPUT_POST, 'today');
-$ = filter_input(INPUT_POST, 'monthNext');
-$ = filter_input(INPUT_POST, 'yearNext');
-$ = filter_input(INPUT_POST, 'monthPrev');
-$ = filter_input(INPUT_POST, 'yearPrev');
+$monthNext = filter_input(INPUT_POST, 'monthNext');
+$yearNext = filter_input(INPUT_POST, 'yearNext');
+$manthPrev = filter_input(INPUT_POST, 'monthPrev');
+$yearPrev = filter_input(INPUT_POST, 'yearPrev');
 
+
+if ($today == 1) {
+    // 現在の年月
+    $month = date('n');
+    $year = date('Y');
+}
+if ($monthNext > 12) {
+    // 12月の次は次の年の１月になる
+    $monthNext = 1;
+    $yearNext++;
+}
+if ($monthPrev === "0") {
+    // 1月の前は前の年の12月になる
+    $monthPrev = 12;
+    $yearPrev--;
+}
 ?>
 
 
