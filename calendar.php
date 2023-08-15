@@ -24,6 +24,12 @@ if ($monthPrev === "0") {
     $monthPrev = 12;
     $yearPrev--;
 }
+
+// 順番に値があるか確認していく
+$month = $monthNext??$manthPrev??date('n');
+$year = $yearNext??$yearPrev??date('Y');
+
+
 ?>
 
 
