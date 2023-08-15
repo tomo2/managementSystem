@@ -86,9 +86,9 @@ for ($i = 1; $i < $lastDay + 1; $i++) {
                             <input type="hidden" name="yearPrev" value="<?php echo $year; ?>">
                         </button>
                     </th>
-
                 </form>
-                <th></th>
+
+                <th id="title" colspan="5"><?php echo $year; ?>年<?php echo $manth; ?>月</th>
                 <th></th>
             </tr>
         </thead>
