@@ -103,11 +103,25 @@ for ($i = 1; $i < $lastDay + 1; $i++) {
                 </form>
             </tr>
         </thead>
+
         <tbody>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <!-- $calendarの配列をループで表示 -->
+            <?php $cnt = 0; ?>
+            <?php foreach ($calendar as $key => $value): ?>
+                <td>
+                    <p>
+                        <?php $cnt++; ?>
+                        <?php echo $value['day']; ?>
+                    </p>
+                </td>
+                <!-- tdが7個になったら次の行に移動 -->
+                    <?php if ($cnt == 7): ?>
+            </tr>
+            <tr>
+                <?php $cnt = 0; ?>
+                <?php endif; ?>
+                <?php endforeach; ?>
             </tr>
         </tbody>
         <tfoot>
