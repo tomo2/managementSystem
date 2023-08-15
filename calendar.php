@@ -29,6 +29,10 @@ if ($monthPrev === "0") {
 $month = $monthNext??$manthPrev??date('n');
 $year = $yearNext??$yearPrev??date('Y');
 
+// 月末を取得
+$lastDay = date('j', mktime(0, 0, 0, $month + 1, 0, $year));
+$calendar = array();
+$j = 0;
 
 ?>
 
