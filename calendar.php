@@ -34,6 +34,7 @@ $lastDay = date('j', mktime(0, 0, 0, $month + 1, 0, $year));
 $calendar = array();
 $j = 0;
 
+// 月末までループ、日付を$calendarの配列に入れる
 for ($i = 1; $i < $lastDay + 1; $i++) {
     // 曜日を取得
     $week = date('w', mktime(0, 0, 0, $month, $i, $year));
@@ -46,6 +47,18 @@ for ($i = 1; $i < $lastDay + 1; $i++) {
         }
     }
 
+    // 配列を日付にセット
+    $calendar[$j]['day'] = $i;
+    $j++;
+
+    // 月末の場合
+    if ($i == $lastDay) {
+        for ($e = 1; $e <= 6 - $week; $e++) {
+            // 後半空文字をセット
+            $calendar[$j]['day'] = '';
+            $j++
+        }
+    }
 
 }
 ?>
