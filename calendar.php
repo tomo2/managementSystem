@@ -56,7 +56,7 @@ for ($i = 1; $i < $lastDay + 1; $i++) {
         for ($e = 1; $e <= 6 - $week; $e++) {
             // 後半空文字をセット
             $calendar[$j]['day'] = '';
-            $j++
+            $j++;
         }
     }
 
@@ -74,6 +74,29 @@ for ($i = 1; $i < $lastDay + 1; $i++) {
     <title>カレンダー</title>
 </head>
 <body>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
     
 </body>
 </html>
