@@ -88,8 +88,19 @@ for ($i = 1; $i < $lastDay + 1; $i++) {
                     </th>
                 </form>
 
+                <!-- 年月を表示 -->
                 <th id="title" colspan="5"><?php echo $year; ?>年<?php echo $manth; ?>月</th>
-                <th></th>
+                
+                <!-- 次月に行くボタン -->
+                <form action="" method="post"> 
+                    <th>
+                        <button type="submit" id="next">
+                            &raquo;
+                            <input type="hidden" name="monthhNext" value="<?php echo $month+1; ?>">
+                            <input type="hidden" name="yearNext" value="<?php echo $year; ?>">
+                        </button>
+                    </th>
+                </form>
             </tr>
         </thead>
         <tbody>
