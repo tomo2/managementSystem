@@ -77,7 +77,17 @@ for ($i = 1; $i < $lastDay + 1; $i++) {
     <table>
         <thead>
             <tr>
-                <th></th>
+                <!-- 前月に戻るボタン -->
+                <form action="" method="post"> 
+                    <th>
+                        <button type="submit" id="prev">
+                            &laquo;
+                            <input type="hidden" name="monthPrev" value="<?php echo $month-1; ?>">
+                            <input type="hidden" name="yearPrev" value="<?php echo $year; ?>">
+                        </button>
+                    </th>
+
+                </form>
                 <th></th>
                 <th></th>
             </tr>
