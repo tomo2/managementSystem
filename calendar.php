@@ -5,7 +5,7 @@ date_default_timezone_set('Asia/Tokyo');
 $today = filter_input(INPUT_POST, 'today');
 $monthNext = filter_input(INPUT_POST, 'monthNext');
 $yearNext = filter_input(INPUT_POST, 'yearNext');
-$manthPrev = filter_input(INPUT_POST, 'monthPrev');
+$monthPrev = filter_input(INPUT_POST, 'monthPrev');
 $yearPrev = filter_input(INPUT_POST, 'yearPrev');
 
 
@@ -71,6 +71,7 @@ for ($i = 1; $i < $lastDay + 1; $i++) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>カレンダー</title>
 </head>
 <body>
@@ -89,7 +90,7 @@ for ($i = 1; $i < $lastDay + 1; $i++) {
                 </form>
 
                 <!-- 年月を表示 -->
-                <th id="title" colspan="5"><?php echo $year; ?>年<?php echo $manth; ?>月</th>
+                <th id="title" colspan="5"><?php echo $year; ?>年<?php echo $month; ?>月</th>
                 
                 <!-- 次月に行くボタン -->
                 <form action="" method="post"> 
@@ -101,6 +102,16 @@ for ($i = 1; $i < $lastDay + 1; $i++) {
                         </button>
                     </th>
                 </form>
+            </tr>
+            <tr>
+                <th class="red">日</th>
+                <th>月</th>
+                <th>火</th>
+                <th>水</th>
+                <th>木</th>
+                <th>金</th>
+                <th class="blue">土</th>
+
             </tr>
         </thead>
 
@@ -137,6 +148,5 @@ for ($i = 1; $i < $lastDay + 1; $i++) {
             </tr>
         </tfoot>
     </table>
-    
 </body>
 </html>
