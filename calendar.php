@@ -34,6 +34,20 @@ $lastDay = date('j', mktime(0, 0, 0, $month + 1, 0, $year));
 $calendar = array();
 $j = 0;
 
+for ($i = 1; $i < $lastDay + 1; $i++) {
+    // 曜日を取得
+    $week = date('w', mktime(0, 0, 0, $month, $i, $year));
+
+    if ($i == 1) {
+        // 最初の曜日に移動
+        for ($s = 1; $s < $week; $s++) {
+            $calendar[$j]['day'] = '';
+            $j++;
+        }
+    }
+
+
+}
 ?>
 
 
