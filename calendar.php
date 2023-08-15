@@ -126,9 +126,14 @@ for ($i = 1; $i < $lastDay + 1; $i++) {
         </tbody>
         <tfoot>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <!-- 現在に行くボタンの処理 -->
+                <form action="" method="post">
+                    <td colspan="7">
+                        <button type="submit" id="today"> 現在に戻る
+                            <input type="hidden" name="today" value="1">
+                        </button>
+                    </td>
+                </form>
             </tr>
         </tfoot>
     </table>
