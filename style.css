@@ -38,3 +38,44 @@ tbody td {
     height: 80px;
     width: 80px;
 }
+tbody td:last-child,
+.blue {
+    color: blue;
+}
+tbody td:first-child,
+.red {
+    color: red;
+}
+tbody .schedules {
+    margin-top: 25px; 
+}
+tbody button {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    text-decoration: underline;
+}
+tfoot {
+    background-color: gainsboro;
+    font-weight: bold;
+    text-align: center;
+}
+tfoot tr {
+    width: 50px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+}
+td.today {
+    background-color: aqua;
+}
+#today {
+    cursor: pointer;
+    user-select: none;
+    font-size: 40px;
+    background-color: gainsboro;
+    border: 0px none;
+}
+#title {
+    font-size: 30px;
+}
