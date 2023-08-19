@@ -4,10 +4,15 @@
 $year = date('Y');
 $month = date('m');
 $day = date('d');
+$today = date('Ymd');
 
 // 1日、月末を取得
-$firstDay = date('d', strtotime('first day of', $month));
-$lastDay = date('d', strtotime('last day of', $month));
+$firstDay = date('Ymd',mktime(0,0,0,date('m'),1,date('Y')));
+$lastDay = date('Ymd',mktime(0,0,0,date('m')+1,0,date('Y')));
+
+$date = date('w', strtotime($firstDay));
+
+echo $date;
 
 ?>
 
