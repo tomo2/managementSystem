@@ -1,3 +1,13 @@
+<?php
+
+
+$year = date('Y');
+$month = date('m');
+$day = date('d');
+
+echo $year, $month, $day;
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,8 +19,10 @@
 </head>
 <body>
     <div class="calendar">
+        <a href="#">次月へ</a>
         <h3>2023.8</h3>
-        <table>
+        <a href="#">先月へ</a>
+        <table class="table table-bordered">
             <tr class="day">
                 <th>日</th>
                 <th>月</th>
