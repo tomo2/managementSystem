@@ -1,11 +1,14 @@
 <?php
 
-
+// 今日の日付を取得
 $year = date('Y');
 $month = date('m');
 $day = date('d');
 
-echo $year, $month, $day;
+// 1日、月末を取得
+$firstDay = date('d', strtotime('first day of', $month));
+$lastDay = date('d', strtotime('last day of', $month));
+
 ?>
 
 <!DOCTYPE html>
