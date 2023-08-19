@@ -6,11 +6,17 @@ $month = date('m');
 $day = date('d');
 $today = date('Ymd');
 
-// 1日、月末を取得
-$firstDay = date('Ymd',mktime(0,0,0,date('m'),1,date('Y')));
-$lastDay = date('Ymd',mktime(0,0,0,date('m')+1,0,date('Y')));
+// 1日、月末、を取得
+// $firstDay = date('Ymd',mktime(0,0,0,date('m'),1,date('Y')));
+$firstDay = (mktime(0,0,0,date('m'),1,date('Y')));
+// $lastDay = date('Ymd',mktime(0,0,0,date('m')+1,0,date('Y')));
+$lastDay = (mktime(0,0,0,date('m')+1,0,date('Y')));
 
-$date = date('w', strtotime($firstDay));
+$firstWeek = date('w', $firstDay);
+$lastWeek = date('w', $lastDay);
+
+
+
 
 ?>
 
