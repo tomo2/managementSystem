@@ -28,7 +28,6 @@ $nunbers = [];
 
 // 1日までの空白を作成する
 $number = str_repeat('<td></td>', $firstWeek);
-echo $number;
 
 ?>
 
@@ -60,9 +59,12 @@ echo $number;
             <tr>
             <!-- 月末までの数字の繰り返し -->
             <?php
+            // カレンダーの最初の空白
+                if(isset($number)) {
+                echo $number;
+                }
+            // カレンダーの数字の繰り返し
                 for ($i = 1; $i <= $last; $i++) {
-                    if ($i % 7) {
-                    }
                 echo '<td>' . $i . '</td>';
                 }
             ?>
