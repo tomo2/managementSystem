@@ -22,9 +22,9 @@ $week = ["日", '月', '火', '水', '木', '金', '土'];
 $firstWeek = date('w', $firstDay);
 $lastWeek = date('w', $lastDay);
 
-echo $week[$firstWeek];
-
-
+// 空の配列の準備
+$nunber = [];
+$nunbers = '';
 
 ?>
 
