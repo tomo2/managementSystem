@@ -27,9 +27,13 @@ $nunber = '';
 $nunbers = [];
 
 // 1日までの空白を作成する
-$number = str_repeat('<td></td>', $firstWeek);
+// $number = str_repeat('', $firstWeek);
+echo $firstWeek;
 
-$oneMonth[] = $number;
+for ($i = 1; $i <= $firstWeek; $i++) {
+    $number[] = $i;
+}
+
 
 for ($i = 1; $i <= $last; $i++) {
     $oneMonth[] = $i;
@@ -70,21 +74,12 @@ echo '</pre>';
             </tr>
         
             <tr>
+
             <!-- 月末までの数字の繰り返し -->
             <?php
-            // カレンダーの最初の空白
-                // if(isset($number)) {
-                // echo $number;
-                // }
-
-            // カレンダーの数字の繰り返し
-                // for ($i = 1; $i <= $last; $i++) {
-                // echo '<td>' . $i . '</td>';
-                // }
-
-
+                // カレンダーの呼び出し
                 foreach ($oneMonth as $oneMonths) {
-                    echo $oneMonths;
+                    echo '<td>' . $oneMonths .'</td>';
                     
                     if ($oneMonths % 7 === 7) {
                         '<br>';
