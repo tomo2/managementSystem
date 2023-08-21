@@ -23,8 +23,12 @@ $firstWeek = date('w', $firstDay);
 $lastWeek = date('w', $lastDay);
 
 // 空の配列の準備
-$nunber = [];
-$nunbers = '';
+$nunber = '';
+$nunbers = [];
+
+// 1日までの空白を作成する
+$number = str_repeat('<td></td>', $firstWeek);
+echo $number;
 
 ?>
 
