@@ -6,15 +6,23 @@ $month = date('m');
 $day = date('d');
 $today = date('Ymd');
 
-// 1日、月末、を取得
+// 1日、月末、を取得 (タイムスタンプ)
 // $firstDay = date('Ymd',mktime(0,0,0,date('m'),1,date('Y')));
 $firstDay = (mktime(0,0,0,date('m'),1,date('Y')));
 // $lastDay = date('Ymd',mktime(0,0,0,date('m')+1,0,date('Y')));
 $lastDay = (mktime(0,0,0,date('m')+1,0,date('Y')));
 
+// 月末日 (31等)
+$last = date('d',mktime(0,0,0,date('m')+1,0,date('Y')));
+
+// 曜日の準備
+$week = ["日", '月', '火', '水', '木', '金', '土'];
+
+// 1日、月末の曜日の取得
 $firstWeek = date('w', $firstDay);
 $lastWeek = date('w', $lastDay);
 
+echo $week[$firstWeek];
 
 
 
@@ -46,7 +54,14 @@ $lastWeek = date('w', $lastDay);
             </tr>
         
             <tr>
-                <td></td>
+            <!-- 月末までの数字の繰り返し -->
+            <?php
+                for ($i = 1; $i <= $last; $i++) {
+                    if ($i % 7) {
+                    }
+                echo '<td>' . $i . '</td>';
+                }
+            ?>
                 <td></td>
                 <td>1</td>
                 <td>2</td>
