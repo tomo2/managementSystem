@@ -32,15 +32,16 @@ $number = str_repeat('<td></td>', $firstWeek);
 $oneMonth[] = $number;
 
 for ($i = 1; $i <= $last; $i++) {
-    $oneMonth[] = '<td>' . $i . '</td>';
+    $oneMonth[] = $i;
 }
 
 // $numbersに空白、日数を代入
-$numbers[] =  $number;
+$numbers[] = $number;
 $numbers[] = $oneMonth;
 
+echo '<pre>';
 var_dump($numbers);
-
+echo '</pre>';
 ?>
 
 <!DOCTYPE html>
@@ -84,8 +85,11 @@ var_dump($numbers);
 
                 foreach ($oneMonth as $oneMonths) {
                     echo $oneMonths;
+                    
+                    if ($oneMonths % 7 === 7) {
+                        '<br>';
+                    }
                 }
-
             ?>
                 <td>1</td>
                 <td>1</td>
