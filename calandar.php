@@ -20,9 +20,6 @@ $week = ["日", '月', '火', '水', '木', '金', '土'];
 $firstWeek = date('w', $firstDay);
 $lastWeek = date('w', $lastDay);
 
-
-// $oneWeek = mktime()
-
 // 空の配列の準備
 $nunbers = [];
 
@@ -81,14 +78,13 @@ echo '</pre>';
             <?php
             
                 // カレンダーの呼び出し
-                foreach ($numbers as $numbers1) {
-                    echo'<td>' . $numbers1 . '</td>';
+                foreach ($numbers as $numbers1 => $key) {
+                    echo'<td>' . $key . '</td>';
 
                     if ($numbers1 % 7 == 6) {
                         echo '</tr>';
                     }
 
-                    
                 }
                 ?>
             </tr>
