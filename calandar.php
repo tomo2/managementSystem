@@ -7,9 +7,7 @@ $day = date('d');
 $today = date('Ymd');
 
 // 1日、月末、を取得 (タイムスタンプ)
-// $firstDay = date('Ymd',mktime(0,0,0,date('m'),1,date('Y')));
 $firstDay = (mktime(0,0,0,date('m'),1,date('Y')));
-// $lastDay = date('Ymd',mktime(0,0,0,date('m')+1,0,date('Y')));
 $lastDay = (mktime(0,0,0,date('m')+1,0,date('Y')));
 
 // 月末日 (31等)
@@ -84,8 +82,8 @@ echo '</pre>';
             
                 // カレンダーの呼び出し
                 foreach ($oneMonth as $oneMonths) {
-                    
                     echo'<td>' . $oneMonths . '</td>';
+                    
                     if ($oneMonths % 7 == 6) {
                         echo '</tr>';
                     }
