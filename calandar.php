@@ -23,17 +23,12 @@ $firstWeek = date('w', $firstDay);
 $lastWeek = date('w', $lastDay);
 
 // 空の配列の準備
-$nunber = '';
 $nunbers = [];
 
 // 1日までの空白を作成する
-// $number = str_repeat('', $firstWeek);
-echo $firstWeek;
-
 for ($i = 1; $i <= $firstWeek; $i++) {
     $number[] = $i;
 }
-
 
 for ($i = 1; $i <= $last; $i++) {
     $oneMonth[] = $i;
@@ -46,6 +41,13 @@ $numbers[] = $oneMonth;
 echo '<pre>';
 var_dump($numbers);
 echo '</pre>';
+
+
+
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -64,28 +66,30 @@ echo '</pre>';
         <a href="#">先月へ</a>
         <table class="table table-bordered">
             <tr class="day">
-                <th>日</th>
-                <th>月</th>
-                <th>火</th>
-                <th>水</th>
-                <th>木</th>
-                <th>金</th>
-                <th>土</th>
+
+            <?php
+            foreach ($week as $weeks) {
+                echo '<th>' . $weeks . '</th>';
+            }
+            ?>
             </tr>
         
             <tr>
 
             <!-- 月末までの数字の繰り返し -->
             <?php
+            
                 // カレンダーの呼び出し
                 foreach ($oneMonth as $oneMonths) {
-                    echo '<td>' . $oneMonths .'</td>';
-                    
-                    if ($oneMonths % 7 === 7) {
-                        '<br>';
+
+                    if ($oneMonths === 6) {
+                    echo '<tr>' . '<td>' . $oneMonths . '</td>' . '</tr>';
                     }
+                    echo '<td>' . $oneMonths . '</td>';
+
+                    
                 }
-            ?>
+                ?>
                 <td>1</td>
                 <td>1</td>
                 <td>2</td>
