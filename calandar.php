@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 date_default_timezone_set('Asia/Tokyo');
 
 // 今日の日付を取得
@@ -11,12 +8,23 @@ $month = date('m');
 $day = date('d');
 $today = date('Ymd');
 
+
+if(isset($_POST['next'])) {
+    $month++;
+
+}
+
+
+
 // 1日、月末、を取得 (タイムスタンプ)
-$firstDay = (mktime(0,0,0,date('m'),1,date('Y')));
-$lastDay = (mktime(0,0,0,date('m')+1,0,date('Y')));
+// $firstDay = (mktime(0,0,0,date('m'),1,date('Y')));
+// $lastDay = (mktime(0,0,0,date('m')+1,0,date('Y')));
+
+$firstDay = (mktime(0, 0, 0, $month, 1, $year));
+$lastDay = (mktime(0, 0, 0, $month + 1, 0, $year));
 
 // 月末日 (31等)
-$last = date('d',mktime(0,0,0,date('m')+1,0,date('Y')));
+$last = date('d',mktime(0, 0, 0, $month + 1, 0, $year));
 
 // 曜日の準備
 $week = ["日", '月', '火', '水', '木', '金', '土'];
@@ -41,6 +49,7 @@ for ($i = 1; $i <= $last; $i++) {
 // $numbersに空白、日数を連結して代入
 $numbers = array_merge($number, $oneMonth);
 
+
 ?>
 
 <!DOCTYPE html>
@@ -56,9 +65,9 @@ $numbers = array_merge($number, $oneMonth);
     <div class="calendar">
 
         <form action="" method="post">
-            <button name="next">先月へ</button>
+            <button name="prev">先月へ</button>
                 <h3><?php echo $year . '年' . $month . '月' ?></h3>
-            <button name="prev">次月へ</button>
+            <button name="next">次月へ</button>
         </form>
 
         <table class="table table-bordered">
