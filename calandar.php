@@ -33,13 +33,13 @@ for ($i = 1; $i <= $firstWeek; $i++) {
     $number[] = $i;
 }
 
+// 一ヶ月の数字を代入
 for ($i = 1; $i <= $last; $i++) {
     $oneMonth[] = $i;
 }
 
 // $numbersに空白、日数を代入
-$numbers[] = $number;
-$numbers[] = $oneMonth;
+$numbers[] = array_merge($number, $oneMonth);
 
 echo '<pre>';
 var_dump($numbers);
