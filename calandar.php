@@ -36,16 +36,6 @@ for ($i = 1; $i <= $last; $i++) {
 // $numbersに空白、日数を代入
 $numbers = array_merge($number, $oneMonth);
 
-echo '<pre>';
-var_dump($numbers);
-echo '</pre>';
-
-
-
-
-
-
-
 ?>
 
 <!DOCTYPE html>
