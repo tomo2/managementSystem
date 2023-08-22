@@ -33,7 +33,7 @@ for ($i = 1; $i <= $last; $i++) {
     $oneMonth[] = $i;
 }
 
-// $numbersに空白、日数を代入
+// $numbersに空白、日数を連結して代入
 $numbers = array_merge($number, $oneMonth);
 
 ?>
@@ -49,12 +49,16 @@ $numbers = array_merge($number, $oneMonth);
 </head>
 <body>
     <div class="calendar">
-        <a href="#">次月へ</a>
+
+        <form action="" method="post"></form>
+        <button name="next">先月へ</button>
         <h3>2023.8</h3>
-        <a href="#">先月へ</a>
+        <button name="prev">次月へ</button>
+
         <table class="table table-bordered">
             <tr class="day">
 
+            <!-- 曜日の表示 -->
             <?php
             foreach ($week as $weeks) {
                 echo '<th>' . $weeks . '</th>';
@@ -66,15 +70,12 @@ $numbers = array_merge($number, $oneMonth);
 
             <!-- 月末までの数字の繰り返し -->
             <?php
-            
-                // カレンダーの呼び出し
                 foreach ($numbers as $numbers1 => $key) {
                     echo'<td>' . $key . '</td>';
 
                     if ($numbers1 % 7 == 6) {
                         echo '</tr>';
                     }
-
                 }
                 ?>
             </tr>
