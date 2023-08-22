@@ -50,10 +50,11 @@ $numbers = array_merge($number, $oneMonth);
 <body>
     <div class="calendar">
 
-        <form action="" method="post"></form>
-        <button name="next">先月へ</button>
-        <h3>2023.8</h3>
-        <button name="prev">次月へ</button>
+        <form action="" method="post">
+            <button name="next">先月へ</button>
+                <h3><?php echo $year . '年' . $month . '月' ?></h3>
+            <button name="prev">次月へ</button>
+        </form>
 
         <table class="table table-bordered">
             <tr class="day">
