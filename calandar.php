@@ -1,5 +1,10 @@
 <?php
 
+
+
+
+date_default_timezone_set('Asia/Tokyo');
+
 // 今日の日付を取得
 $year = date('Y');
 $month = date('m');
