@@ -37,7 +37,7 @@ for ($i = 1; $i <= $last; $i++) {
 }
 
 // $numbersに空白、日数を代入
-$numbers[] = array_merge($number, $oneMonth);
+$numbers = array_merge($number, $oneMonth);
 
 echo '<pre>';
 var_dump($numbers);
@@ -81,10 +81,10 @@ echo '</pre>';
             <?php
             
                 // カレンダーの呼び出し
-                foreach ($oneMonth as $oneMonths) {
-                    echo'<td>' . $oneMonths . '</td>';
-                    
-                    if ($oneMonths % 7 == 6) {
+                foreach ($numbers as $numbers1) {
+                    echo'<td>' . $numbers1 . '</td>';
+
+                    if ($numbers1 % 7 == 6) {
                         echo '</tr>';
                     }
 
