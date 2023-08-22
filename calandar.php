@@ -28,7 +28,7 @@ $nunbers = [];
 
 // 1日までの空白を作成する
 for ($i = 1; $i <= $firstWeek; $i++) {
-    $number[] = $i;
+    $number[] = "";
 }
 
 // 一ヶ月の数字を代入
