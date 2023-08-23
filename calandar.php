@@ -8,20 +8,24 @@ $month = date('m');
 $day = date('d');
 $today = date('Ymd');
 
+$prevMonth = (mktime(0, 0, 0, $month - 1, 1, $year));
+$nextMonth = (mktime(0, 0, 0, $month + 1, 1, $year));
 
-if(isset($_POST['next'])) {
-    $month++;
+echo date ('Y', $prevMonth);
 
-}
 
+// if (isset($_POST['next'])) {
+//     $month = $nextMonth;
+// }
 
 
 // 1日、月末、を取得 (タイムスタンプ)
-// $firstDay = (mktime(0,0,0,date('m'),1,date('Y')));
-// $lastDay = (mktime(0,0,0,date('m')+1,0,date('Y')));
-
 $firstDay = (mktime(0, 0, 0, $month, 1, $year));
 $lastDay = (mktime(0, 0, 0, $month + 1, 0, $year));
+
+// 1日、月末の曜日の取得
+$firstWeek = date('w', $firstDay);
+$lastWeek = date('w', $lastDay);
 
 // 月末日 (31等)
 $last = date('d',mktime(0, 0, 0, $month + 1, 0, $year));
@@ -29,9 +33,6 @@ $last = date('d',mktime(0, 0, 0, $month + 1, 0, $year));
 // 曜日の準備
 $week = ["日", '月', '火', '水', '木', '金', '土'];
 
-// 1日、月末の曜日の取得
-$firstWeek = date('w', $firstDay);
-$lastWeek = date('w', $lastDay);
 
 // 空の配列の準備
 $nunbers = [];
@@ -63,12 +64,11 @@ $numbers = array_merge($number, $oneMonth);
 </head>
 <body>
     <div class="calendar">
-
-        <form action="" method="post">
-            <button name="prev">先月へ</button>
-                <h3><?php echo $year . '年' . $month . '月' ?></h3>
-            <button name="next">次月へ</button>
-        </form>
+<form action="" method="post">
+        <button type="submit" name="prev">先月へ</button>
+            <h3><?php echo $year . '年' . $month . '月' ?></h3>
+        <button type="submit" name="next" value="<?php $month;?>">次月へ</button>
+    </form>
 
         <table class="table table-bordered">
             <tr class="day">
