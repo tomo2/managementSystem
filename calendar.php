@@ -18,7 +18,36 @@ if (isset($_POST['1'])) {
 if (isset($_POST['2'])) {
     $month = 2;
 }
-
+if (isset($_POST['3'])) {
+    $month = 3;
+}
+if (isset($_POST['4'])) {
+    $month = 4;
+}
+if (isset($_POST['5'])) {
+    $month = 5;
+}
+if (isset($_POST['6'])) {
+    $month = 6;
+}
+if (isset($_POST['7'])) {
+    $month = 7;
+}
+if (isset($_POST['8'])) {
+    $month = 8;
+}
+if (isset($_POST['9'])) {
+    $month = 9;
+}
+if (isset($_POST['10'])) {
+    $month = 10;
+}
+if (isset($_POST['11'])) {
+    $month = 11;
+}
+if (isset($_POST['12'])) {
+    $month = 12;
+}
 
 // 1日、月末、を取得 (タイムスタンプ)
 $firstDay = (mktime(0, 0, 0, $month, 1, $year));
