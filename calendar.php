@@ -13,23 +13,6 @@ $prevMonth = (mktime(0, 0, 0, $month - 1, 1, $year));
 $nextMonth = (mktime(0, 0, 0, $month + 1, 1, $year));
 
 
-
-
-
-$ym = (isset($_GET["ym"]))? $_GET["ym"] : date("Ym");
-
-$lastmonth = date("Ym",strtotime($ym."01"." -1 month "));
-$nextmonth = date("Ym",strtotime($ym."01"." +1 month "));
-
-echo '<a href="calandar.php?ym='.$lastmonth.'">前月</a>';
-echo '<a href="calandar.php?ym='.$nextmonth.'">次月</a>';
-
-$this_month_days = date("t",strtotime($ym."01"));//当月の日数を取得。
-
-
-
-
-
 // 1日、月末、を取得 (タイムスタンプ)
 $firstDay = (mktime(0, 0, 0, $month, 1, $year));
 $lastDay = (mktime(0, 0, 0, $month + 1, 0, $year));
