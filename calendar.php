@@ -9,8 +9,12 @@ $day = date('d');
 $today = date('Ymd');
 
 // 先月、来月のタイムスタンプを取得
-$prevMonth = (mktime(0, 0, 0, $month - 1, 1, $year));
-$nextMonth = (mktime(0, 0, 0, $month + 1, 1, $year));
+// $prevMonth = (mktime(0, 0, 0, $month - 1, 1, $year));
+// $nextMonth = (mktime(0, 0, 0, $month + 1, 1, $year));
+
+if (isset($_POST['1'])) {
+    $month++;
+}
 
 
 // 1日、月末、を取得 (タイムスタンプ)
@@ -59,10 +63,26 @@ $numbers = array_merge($number, $oneMonth);
 <body>
     <div class="calendar">
 <form action="" method="post">
-        <button type="submit" name="prev">先月へ</button>
+        <!-- <button type="submit" name="prev">先月へ</button>
             <h3><?php echo $year . '年' . $month . '月' ?></h3>
-        <button type="submit" name="next" value="<?php $month;?>">次月へ</button>
+        <button type="submit" name="next" value="<?php $month;?>">次月へ</button> -->
+
+        <button type="submit" name="1">1月</button>
+        <button type="submit" name="2">2月</button>
+        <button type="submit" name="3">3月</button>
+        <button type="submit" name="4">4月</button>
+        <button type="submit" name="5">5月</button>
+        <button type="submit" name="6">6月</button>
+        <button type="submit" name="7">7月</button>
+        <button type="submit" name="8">8月</button>
+        <button type="submit" name="9">9月</button>
+        <button type="submit" name="10">10月</button>
+        <button type="submit" name="11">11月</button>
+        <button type="submit" name="12">12月</button>
+
     </form>
+
+
 
         <table class="table table-bordered">
             <tr class="day">
