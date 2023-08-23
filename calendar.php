@@ -13,7 +13,10 @@ $today = date('Ymd');
 // $nextMonth = (mktime(0, 0, 0, $month + 1, 1, $year));
 
 if (isset($_POST['1'])) {
-    $month++;
+    $month = 1;
+}
+if (isset($_POST['2'])) {
+    $month = 2;
 }
 
 
@@ -46,8 +49,11 @@ for ($i = 1; $i <= $last; $i++) {
 }
 
 // $numbersに空白、日数を連結して代入
-$numbers = array_merge($number, $oneMonth);
-
+if (isset($number)) {
+    $numbers = array_merge($number, $oneMonth);
+} else {
+    $numbers = [...$oneMonth];
+}
 
 ?>
 
@@ -64,9 +70,10 @@ $numbers = array_merge($number, $oneMonth);
     <div class="calendar">
 <form action="" method="post">
         <!-- <button type="submit" name="prev">先月へ</button>
-            <h3><?php echo $year . '年' . $month . '月' ?></h3>
-        <button type="submit" name="next" value="<?php $month;?>">次月へ</button> -->
+            
+        <button type="submit" name="next">次月へ</button> -->
 
+        <h3><?php echo $year . '年' . $month . '月' ?></h3>
         <button type="submit" name="1">1月</button>
         <button type="submit" name="2">2月</button>
         <button type="submit" name="3">3月</button>
