@@ -72,6 +72,10 @@ for ($i = 1; $i <= $firstWeek; $i++) {
     $number[] = "";
 }
 
+    if (!$lastWeek % 7 == 6) {
+        $lastNumber = "";
+    }
+
 // 一ヶ月の数字を代入
 for ($i = 1; $i <= $last; $i++) {
     $oneMonth[] = $i;
@@ -99,22 +103,24 @@ if (isset($number)) {
     <div class="calendar">
 <form action="" method="post">
         <!-- <button type="submit" name="prev">先月へ</button>
-            
         <button type="submit" name="next">次月へ</button> -->
 
         <h3><?php echo $year . '年' . $month . '月' ?></h3>
-        <button type="submit" name="1">1月</button>
-        <button type="submit" name="2">2月</button>
-        <button type="submit" name="3">3月</button>
-        <button type="submit" name="4">4月</button>
-        <button type="submit" name="5">5月</button>
-        <button type="submit" name="6">6月</button>
-        <button type="submit" name="7">7月</button>
-        <button type="submit" name="8">8月</button>
-        <button type="submit" name="9">9月</button>
-        <button type="submit" name="10">10月</button>
-        <button type="submit" name="11">11月</button>
-        <button type="submit" name="12">12月</button>
+
+        <div>
+            <button type="submit" name="1">1月</button>
+            <button type="submit" name="2">2月</button>
+            <button type="submit" name="3">3月</button>
+            <button type="submit" name="4">4月</button>
+            <button type="submit" name="5">5月</button>
+            <button type="submit" name="6">6月</button>
+            <button type="submit" name="7">7月</button>
+            <button type="submit" name="8">8月</button>
+            <button type="submit" name="9">9月</button>
+            <button type="submit" name="10">10月</button>
+            <button type="submit" name="11">11月</button>
+            <button type="submit" name="12">12月</button>
+        </div>
 
     </form>
 
