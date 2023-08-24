@@ -66,15 +66,12 @@ $week = ["日", '月', '火', '水', '木', '金', '土'];
 
 // 空の配列の準備
 $nunbers = [];
+$lastNumbers = [];
 
 // 1日までの空白を作成する
 for ($i = 1; $i <= $firstWeek; $i++) {
     $number[] = "";
 }
-
-    if (!$lastWeek % 7 == 6) {
-        $lastNumber = "";
-    }
 
 // 一ヶ月の数字を代入
 for ($i = 1; $i <= $last; $i++) {
