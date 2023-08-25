@@ -95,6 +95,7 @@ if (isset($number)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>カレンダー</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="calendar">
@@ -104,7 +105,7 @@ if (isset($number)) {
 
         <h3><?php echo $year . '年' . $month . '月' ?></h3>
 
-        <div>
+        <div class="monthBtn">
             <button type="submit" name="1">1月</button>
             <button type="submit" name="2">2月</button>
             <button type="submit" name="3">3月</button>
