@@ -29,3 +29,27 @@ if (conut($err) === 0) {
     }
 } 
 
+?>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登録が完了しました</title>
+</head>
+<body>
+    <!-- $errに値が入っていれば -->
+    <?php if (count($err) > 0) : ?>
+        <?php foreach ($err as $e) : ?>
+            <p><?php echo $e ?></p>
+        <?php endforeach ?>
+    <?php else : ?>
+            <p>登録が完了しました</p>
+    <? endif ?>
+            <a href="./signup.php">戻る</a>
+
+</body>
+</html>
+
