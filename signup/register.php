@@ -1,25 +1,28 @@
 <?php
 
-require_once 'UserLogin.php';
+require_once 'login.php';
 
 // エラー
 $err = [];
 
 // バリデーション
-if (!$ = filter_input(INPUT_POST, 'username')) {
+if (!$username = filter_input(INPUT_POST, 'username')) {
     $err[] = 'ユーザー名が記入されていません';
 }
 if (!$email = filter_input(INPUT_POST, 'email')) {
     $err[] = 'メールアドレスが記入されていません';
 }
-if (!$email = filter_input(INPUT_POST, 'password')) {
-    $err[] = 'パスワードは英数字8文字以上100文字以内で記入してください';
-}
-if (!$email = filter_input(INPUT_POST, 'password_conf')) {
-    $err[] = '確認用パスワードが間違っています';
-}
+$password = filter_input(INPUT_POST, 'password');
+    if (!preg_match("/\A[a-z\d]{8,100}+\z/i", $password)){
+        $err[] = 'パスワードは英数字8文字以上100文字以内で記入してください';
+    }
+$password_conf = filter_input(INPUT_POST, 'password_conf');
+    if ($password !== $password_conf) {
+        $err[] = '確認用パスワードが間違っています';
+    }
 
-if (conut($err) === 0) {
+
+if (count($err) === 0) {
     // 値がある
     $hasCreated = UserLogin::createUser($_POST);
 
@@ -52,4 +55,3 @@ if (conut($err) === 0) {
 
 </body>
 </html>
-
