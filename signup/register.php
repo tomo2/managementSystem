@@ -9,18 +9,20 @@ $err = [];
 if (!$username = filter_input(INPUT_POST, 'username')) {
     $err[] = 'ユーザー名が記入されていません';
 }
+
 if (!$email = filter_input(INPUT_POST, 'email')) {
     $err[] = 'メールアドレスが記入されていません';
 }
+
 $password = filter_input(INPUT_POST, 'password');
     if (!preg_match("/\A[a-z\d]{8,100}+\z/i", $password)){
         $err[] = 'パスワードは英数字8文字以上100文字以内で記入してください';
     }
+
 $password_conf = filter_input(INPUT_POST, 'password_conf');
     if ($password !== $password_conf) {
         $err[] = '確認用パスワードが間違っています';
     }
-
 
 if (count($err) === 0) {
     // 値がある
@@ -46,11 +48,11 @@ if (count($err) === 0) {
     <!-- $errに値が入っていれば -->
     <?php if (count($err) > 0) : ?>
         <?php foreach ($err as $e) : ?>
-            <p><?php echo $e ?></p>
+            <p><?php echo $e; ?></p>
         <?php endforeach ?>
     <?php else : ?>
             <p>登録が完了しました</p>
-    <? endif ?>
+    <?php endif ?>
             <a href="./signup.php">戻る</a>
 
 </body>
