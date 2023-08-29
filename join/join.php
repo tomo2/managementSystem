@@ -1,8 +1,11 @@
 <?
 
+$form = [];
+$error = [];
+
 $form['name'] = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_ADD_SLASHES);
 if ($form['name'] === '') {
-    echo '名前を入力してください';
+    $error['name'] = 'blank';
 }
 ?>
 
@@ -22,6 +25,7 @@ if ($form['name'] === '') {
         <p>
             <label for="name">ユーザー名：</label>
             <input type="text" name="name">
+            
         </p>
         <p>
             <label for="password">パスワード：</label>
