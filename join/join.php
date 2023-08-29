@@ -25,8 +25,10 @@ if ($form['name'] === '') {
         <p>
             <label for="name">ユーザー名：</label>
             <input type="text" name="name">
-            
-        </p>
+            <?php if ($form['name'] === 'blank'): ?>
+                <p class="error">名前を入力してください</p>
+            <?php endif; ?>
+            </p>
         <p>
             <label for="password">パスワード：</label>
             <input type="password" name="password">
