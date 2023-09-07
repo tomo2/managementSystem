@@ -18,7 +18,7 @@ if (isset($_POST['care'])) {
 </head>
 <body>
 
-    <form action="" method="post">
+    <form action="./registration_db.php" method="post">
         お名前：<input type="text" name="name"><br>
 
         ・度合い<br>
