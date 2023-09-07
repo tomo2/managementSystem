@@ -8,4 +8,8 @@ if (isset($_POST['name'])) {
     $care = htmlspecialchars($_POST['care'], ENT_QUOTES);
     $time = htmlspecialchars($_POST['time'], ENT_QUOTES);
 
+
+    $dsn = "mysql:host=localhost;dbname=msystem;charset=utf8";
+    $user="root";
+    $pass="root";
 }
