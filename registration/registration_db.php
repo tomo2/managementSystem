@@ -12,4 +12,9 @@ if (isset($_POST['name'])) {
     $dsn = "mysql:host=localhost;dbname=msystem;charset=utf8";
     $user="root";
     $pass="root";
+
+    try {
+        $db = new PDO($dsn, $user, $pass);
+        $db->query('INSERT INTO msistem ()
+    }
 }
