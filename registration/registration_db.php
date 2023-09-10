@@ -15,6 +15,9 @@ if (isset($_POST['name'])) {
 
     try {
         $db = new PDO($dsn, $user, $pass);
-        $db->query('INSERT INTO msistem ()
+        $db->query("INSERT INTO msistem (name, care, time)
+                    VALUES ('$name', '$care', '$time')");
+    }catch (Exception $e) {
+        echo $e->getMessage();
     }
 }
