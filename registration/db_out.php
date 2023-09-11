@@ -21,3 +21,19 @@
     }
 
 ?>
+
+<table>
+    <tr>
+        <th>表示</th>
+        <th>登録情報</th>
+    </tr>
+
+    <?php foreach ($result as $row) : ?>
+        <tr>
+        <td><?php echo $row['id']; ?></td>
+        <td><?php echo $row['name']; ?></td>
+        <td><?php echo $row['care']; ?></td>
+        <td><?php echo $row['time']; ?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
