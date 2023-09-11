@@ -14,7 +14,6 @@
         $stmt->execute();
         
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        var_dump($result);
 
     }catch (Exception $e) {
         echo $e->getMessage();
@@ -24,10 +23,13 @@
 
 <table>
     <tr>
-        <th>表示</th>
-        <th>登録情報</th>
+        <th>ID</th>
+        <th>名前</th>
+        <th>介護度</th>
+        <th>利用時間</th>
     </tr>
 
+    <!-- dbの中身を一つずつ取り出す -->
     <?php foreach ($result as $row) : ?>
         <tr>
         <td><?php echo $row['id']; ?></td>
