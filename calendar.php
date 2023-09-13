@@ -94,7 +94,7 @@ if (isset($number)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>カレンダー</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -103,21 +103,21 @@ if (isset($number)) {
         <!-- <button type="submit" name="prev">先月へ</button>
         <button type="submit" name="next">次月へ</button> -->
 
-        <h3><?php echo $year . '年' . $month . '月' ?></h3>
+        <h3 class="ym"><?php echo $year . '年' . $month . '月' ?></h3>
 
-        <div class="monthBtn">
-            <button type="submit" name="1">1月</button>
-            <button type="submit" name="2">2月</button>
-            <button type="submit" name="3">3月</button>
-            <button type="submit" name="4">4月</button>
-            <button type="submit" name="5">5月</button>
-            <button type="submit" name="6">6月</button>
-            <button type="submit" name="7">7月</button>
-            <button type="submit" name="8">8月</button>
-            <button type="submit" name="9">9月</button>
-            <button type="submit" name="10">10月</button>
-            <button type="submit" name="11">11月</button>
-            <button type="submit" name="12">12月</button>
+        <div class="monthBtns">
+            <button type="submit" name="1" class="monthBtn">1月</button>
+            <button type="submit" name="2" class="monthBtn">2月</button>
+            <button type="submit" name="3" class="monthBtn">3月</button>
+            <button type="submit" name="4" class="monthBtn">4月</button>
+            <button type="submit" name="5" class="monthBtn">5月</button>
+            <button type="submit" name="6" class="monthBtn">6月</button>
+            <button type="submit" name="7" class="monthBtn">7月</button>
+            <button type="submit" name="8" class="monthBtn">8月</button>
+            <button type="submit" name="9" class="monthBtn">9月</button>
+            <button type="submit" name="10" class="monthBtn">10月</button>
+            <button type="submit" name="11" class="monthBtn">11月</button>
+            <button type="submit" name="12" class="monthBtn">12月</button>
         </div>
 
     </form>
@@ -138,8 +138,7 @@ if (isset($number)) {
             <!-- 月末までの数字の繰り返し -->
             <?php
                 foreach ($numbers as $numbers1 => $key) {
-                    echo'<td>' . $key . '</td>';
-
+                    echo "<td class='$month.$key'>" . $key . '</td>';
                     if ($numbers1 % 7 == 6) {
                         echo '</tr>';
                     }
