@@ -21,7 +21,13 @@ if (isset($_POST['care'])) {
 <body>
 
     <form action="./registration_db.php" method="post">
-        お名前：<input type="text" name="name"><br>
+        お名前：
+<div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1">@</span>
+    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+<br>
+
 <h2>介護度</h2>
     <ul class="list-group list-group-horizontal">
         <li class="list-group-item"><label><input type="radio" name="care" value="要介護1">要介護1</label></li>
@@ -30,6 +36,7 @@ if (isset($_POST['care'])) {
         <li class="list-group-item"><label><input type="radio" name="care" value="要介護4">要介護4</label></li>
         <li class="list-group-item"><label><input type="radio" name="care" value="要介護5">要介護5</label></li>
     </ul>
+    <br>
 
     <h2>利用時間</h2>
     <ul class="list-group list-group-horizontal">
@@ -40,8 +47,12 @@ if (isset($_POST['care'])) {
         <li class="list-group-item"><label><input type="radio" name="time" value="7~8時間">7~8時間</label></li>
         <li class="list-group-item"><label><input type="radio" name="time" value="8~9時間">8~9時間</label></li>
     </ul>
+    <br>
 
-        <button type="submit">送信する</button>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" type="button">送信する</button>
+    </div>
+
     </form>
     
 </body>
