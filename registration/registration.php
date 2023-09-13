@@ -14,7 +14,8 @@ if (isset($_POST['care'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>利用者登録ページ</title>
 </head>
 <body>
@@ -31,43 +32,42 @@ if (isset($_POST['care'])) {
             <label><input type="radio" name="care" value="要介護4">要介護4<br></label>
             <label><input type="radio" name="care" value="要介護5">要介護5<br></label>
         </div>
-                ・時間<br>
+            <div class="item-list">
+                    <label><input type="radio" name="time" value="3~4時間">3~4時間<br></label>
+                    <label><input type="radio" name="time" value="3~4時間">3~4時間<br></label>
+                    <label><input type="radio" name="time" value="3~4時間">3~4時間<br></label>
+                    <label><input type="radio" name="time" value="3~4時間">3~4時間<br></label>
+                    <label><input type="radio" name="time" value="3~4時間">3~4時間<br></label>
+                    </div>
                 <div class="item-list">
-                    <label><input type="radio" name="time" value="3~4時間">3~4時間<br></label>
-                    <label><input type="radio" name="time" value="3~4時間">3~4時間<br></label>
-                    <label><input type="radio" name="time" value="3~4時間">3~4時間<br></label>
-                    <label><input type="radio" name="time" value="3~4時間">3~4時間<br></label>
-                    <label><input type="radio" name="time" value="3~4時間">3~4時間<br></label>
-                    </div>
-                    <div class="item-list">
                     <label><input type="radio" name="time" value="4~5時間">4~5時間<br></label>
                     <label><input type="radio" name="time" value="4~5時間">4~5時間<br></label>
                     <label><input type="radio" name="time" value="4~5時間">4~5時間<br></label>
                     <label><input type="radio" name="time" value="4~5時間">4~5時間<br></label>
                     <label><input type="radio" name="time" value="4~5時間">4~5時間<br></label>
-                    </div>
-                    <div class="item-list">
+                </div>
+                <div class="item-list">
                     <label><input type="radio" name="time" value="5~6時間">5~6時間<br></label>
                     <label><input type="radio" name="time" value="5~6時間">5~6時間<br></label>
                     <label><input type="radio" name="time" value="5~6時間">5~6時間<br></label>
                     <label><input type="radio" name="time" value="5~6時間">5~6時間<br></label>
                     <label><input type="radio" name="time" value="5~6時間">5~6時間<br></label>
-                    </div>
-                    <div class="item-list">
+                </div>
+                <div class="item-list">
                     <label><input type="radio" name="time" value="6~7時間">6~7時間<br></label>
                     <label><input type="radio" name="time" value="6~7時間">6~7時間<br></label>
                     <label><input type="radio" name="time" value="6~7時間">6~7時間<br></label>
                     <label><input type="radio" name="time" value="6~7時間">6~7時間<br></label>
                     <label><input type="radio" name="time" value="6~7時間">6~7時間<br></label>
-                    </div>
-                    <div class="item-list">
+                </div>
+                <div class="item-list">
                     <label><input type="radio" name="time" value="7~8時間">7~8時間<br></label>
                     <label><input type="radio" name="time" value="7~8時間">7~8時間<br></label>
                     <label><input type="radio" name="time" value="7~8時間">7~8時間<br></label>
                     <label><input type="radio" name="time" value="7~8時間">7~8時間<br></label>
                     <label><input type="radio" name="time" value="7~8時間">7~8時間<br></label>
-                    </div>
-                    <div class="item-list">
+                </div>
+                <div class="item-list">
                     <label><input type="radio" name="time" value="8~9時間">8~9時間<br></label>
                     <label><input type="radio" name="time" value="8~9時間">8~9時間<br></label>
                     <label><input type="radio" name="time" value="8~9時間">8~9時間<br></label>
