@@ -22,56 +22,22 @@ if (isset($_POST['care'])) {
 
     <form action="./registration_db.php" method="post">
         お名前：<input type="text" name="name"><br>
-
+<h2>介護度</h2>
     <ul class="list-group list-group-horizontal">
-        <li class="list-group-item"><label><input type="radio" name="care" value="要介護1">要介護1<br></label></li>
-        <li class="list-group-item"> <label><input type="radio" name="care" value="要介護2">要介護2<br></label></li>
-        <li class="list-group-item"><label><input type="radio" name="care" value="要介護3">要介護3<br></label></li>
-        <li class="list-group-item"><label><input type="radio" name="care" value="要介護4">要介護4<br></label></li>
-        <li class="list-group-item"><label><input type="radio" name="care" value="要介護5">要介護5<br></label></li>
+        <li class="list-group-item"><label><input type="radio" name="care" value="要介護1">要介護1</label></li>
+        <li class="list-group-item"> <label><input type="radio" name="care" value="要介護2">要介護2</label></li>
+        <li class="list-group-item"><label><input type="radio" name="care" value="要介護3">要介護3</label></li>
+        <li class="list-group-item"><label><input type="radio" name="care" value="要介護4">要介護4</label></li>
+        <li class="list-group-item"><label><input type="radio" name="care" value="要介護5">要介護5</label></li>
     </ul>
 
+    <h2>利用時間</h2>
     <ul class="list-group list-group-horizontal">
-        <li class="list-group-item"><label><input type="radio" name="time" value="3~4時間">3~4時間<br></label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="3~4時間">3~4時間<br></label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="3~4時間">3~4時間<br></label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="3~4時間">3~4時間<br></label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="3~4時間">3~4時間<br></label></li>
-    </ul>
-    
-    <ul class="list-group list-group-horizontal">
-        <li class="list-group-item"><label><input type="radio" name="time" value="4~5時間">4~5時間<br></label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="4~5時間">4~5時間<br></label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="4~5時間">4~5時間<br></label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="4~5時間">4~5時間<br></label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="4~5時間">4~5時間<br></label></li>
-    </ul>
-    <ul class="list-group list-group-horizontal">
+        <li class="list-group-item"><label><input type="radio" name="time" value="3~4時間">3~4時間</label></li>
+        <li class="list-group-item"><label><input type="radio" name="time" value="4~5時間">4~5時間</label></li>
         <li class="list-group-item"><label><input type="radio" name="time" value="5~6時間">5~6時間</label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="5~6時間">5~6時間</label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="5~6時間">5~6時間</label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="5~6時間">5~6時間</label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="5~6時間">5~6時間</label></li>
-    </ul>
-    <ul class="list-group list-group-horizontal">
         <li class="list-group-item"><label><input type="radio" name="time" value="6~7時間">6~7時間</label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="6~7時間">6~7時間</label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="6~7時間">6~7時間</label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="6~7時間">6~7時間</label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="6~7時間">6~7時間</label></li>
-    </ul>
-    <ul class="list-group list-group-horizontal">
         <li class="list-group-item"><label><input type="radio" name="time" value="7~8時間">7~8時間</label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="7~8時間">7~8時間</label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="7~8時間">7~8時間</label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="7~8時間">7~8時間</label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="7~8時間">7~8時間</label></li>
-    </ul>
-    <ul class="list-group list-group-horizontal">
-        <li class="list-group-item"><label><input type="radio" name="time" value="8~9時間">8~9時間</label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="8~9時間">8~9時間</label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="8~9時間">8~9時間</label></li>
-        <li class="list-group-item"><label><input type="radio" name="time" value="8~9時間">8~9時間</label></li>
         <li class="list-group-item"><label><input type="radio" name="time" value="8~9時間">8~9時間</label></li>
     </ul>
 
