@@ -49,7 +49,7 @@ if (isset($_POST['care'])) {
         </ul>
         <br>
     
-        <input type="submit" value="送信">
+        <input type="submit" class="btn btn-primary" value="送信">
 </div>
 
     </form>
