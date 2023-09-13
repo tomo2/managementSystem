@@ -23,6 +23,8 @@ if (isset($_POST['care'])) {
 <!-- postで選択項目を送信 -->
     <form action="./registration_db.php" method="post">
 <div class="registration">
+
+    <h1>利用者登録ページ</h1>
     
     <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1">@</span>
