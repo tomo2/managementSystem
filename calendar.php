@@ -87,21 +87,9 @@ if (isset($number)) {
 
 ?>
 
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>カレンダー</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+
     <div class="calendar">
 <form action="" method="post">
-        <!-- <button type="submit" name="prev">先月へ</button>
-        <button type="submit" name="next">次月へ</button> -->
 
         <h3 class="ym"><?php echo $year . '年' . $month . '月' ?></h3>
 
@@ -124,7 +112,7 @@ if (isset($number)) {
 
 
 
-        <table class="table table-bordered">
+        <table class="numbers">
             <tr class="day">
             <!-- 曜日の表示 -->
             <?php
@@ -148,5 +136,3 @@ if (isset($number)) {
 
         </table>
     </div>
-</body>
-</html>
