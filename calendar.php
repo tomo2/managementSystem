@@ -126,7 +126,9 @@ if (isset($number)) {
             <!-- 月末までの数字の繰り返し -->
             <?php
                 foreach ($numbers as $numbers1 => $key) {
-                    echo "<td class='$month.$key'>" . $key . '</td>';
+                    echo "<div class='$month.$key'>";
+                    echo "<td>" . $key . '</td>';
+                    echo "</div>";
                     if ($numbers1 % 7 == 6) {
                         echo '</tr>';
                     }
