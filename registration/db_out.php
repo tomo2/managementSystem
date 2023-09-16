@@ -21,7 +21,9 @@
 
 ?>
 
-<table>
+
+
+<table class="select_table">
     <tr>
         <th>ID</th>
         <th>名前</th>
@@ -31,11 +33,11 @@
 
     <!-- dbの中身を一つずつ取り出す -->
     <?php foreach ($result as $row) : ?>
-        <tr>
-        <td><?php echo $row['id']; ?></td>
-        <td><?php echo $row['name']; ?></td>
-        <td><?php echo $row['care']; ?></td>
-        <td><?php echo $row['time']; ?></td>
+        <tr class="<?php echo $row['id'] ?>">
+            <td><?php echo $row['id']; ?></td>
+            <td><?php echo $row['name']; ?></td>
+            <td><?php echo $row['care']; ?></td>
+            <td><?php echo $row['time']; ?></td>
         </tr>
     <?php endforeach; ?>
 </table>
